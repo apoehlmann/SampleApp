@@ -1,0 +1,8 @@
+rootProject.name = 'cleanarchitecture'
+include 'Presentation'
+findProject(':Presentation')?.name = 'presentation'
+include 'Domain'
+findProject(':Domain')?.name = 'domain'
+include 'Repository'
+findProject(':Repository')?.name = 'repository'
+

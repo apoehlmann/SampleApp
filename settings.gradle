@@ -1,0 +1,6 @@
+include ':sampleapp' , ':presentation',
+        ':cleanArchitecture:presentation', ':cleanArchitecture:domain',
+        ':cleanArchitecture:repository'
+
+
+

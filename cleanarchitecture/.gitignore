@@ -1,0 +1,15 @@
+
+/Repository/build/
+/gradle/wrapper/gradle-wrapper.jar
+/Domain/build/
+/build/
+/.idea/
+/.gradle/
+/Presentation/build/
+/local.properties
+/out/
+/Domain/out/
+cleanArchitecture.iml
+domain.iml
+cleanArchitecture-presentation.iml
+cleanArchitecture-repository.iml

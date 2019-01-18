@@ -1,0 +1,73 @@
+
+
+buildscript {
+    ext.kotlin_version = '1.3.11'
+
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+group 'de.apoehlmann'
+version '0.1'
+
+apply plugin: 'kotlin'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+    implementation "io.reactivex.rxjava2:rxjava:2.2.4"
+    testImplementation group: 'org.mockito', name: 'mockito-core', version: '2.23.4'
+}
+
+/*publishing {
+    publications {
+        artifactId = 'presentation'
+        from components.java
+        artifact sourcesJar
+        artifact javadocJar
+        pom {
+            name = 'Presentation'
+            description = 'Presentationlayer of Clean Architecture'
+            licenses {
+                license {
+                    name = 'The Apache License, Version 2.0'
+                    url = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                }
+            }
+            developers {
+                developer {
+                    id = 'apoehlmann'
+                    name = 'Alexander Pöhlmann'
+                    email = 'kontakt@apoehlmann.de'
+                }
+            }
+            scm {
+                connection = 'scm:git:git:apoehlmann@bitbucket.org/apoehlmann/clean-architecture.git'
+                developerConnection = 'scm:git:https://apoehlmann@bitbucket.org/apoehlmann/clean-architecture.git'
+                url = 'https://bitbucket.org/apoehlmann/clean-architecture/src/master/'
+            }
+        }
+    }
+}
+repositories {
+    maven {
+        // change URLs to point to your repos, e.g. http://my.org/repo
+        def releasesRepoUrl = "$buildDir/repos/releases"
+        def snapshotsRepoUrl = "$buildDir/repos/snapshots"
+        url = version.endsWith('SNAPSHOT') ? snapshotsRepoUrl : releasesRepoUrl
+    }
+}*/
+
+compileKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
+compileTestKotlin {
+    kotlinOptions.jvmTarget = "1.8"
+}
